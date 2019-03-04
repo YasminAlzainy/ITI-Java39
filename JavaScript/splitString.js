@@ -3,7 +3,7 @@ function split() {
     var text = document.getElementById("text").value;
     var splitor = document.getElementById("splitor").value;
 
-    var splitedResult = text.split(text, splitor);
+    var splitedResult = text.split(splitor);
 
 
 

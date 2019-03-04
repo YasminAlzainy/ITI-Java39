@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <title>My Contacts</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="Contacts.js"></script>
+</head>
+
+<body>
+    <section data-role="page" id="contactList">
+        <header data-role="header">
+            <h2> Contact List </h2>
+            <a href="#newContact" data-role="button" data-icon="plus">Add</a>
+
+        </header>
+
+        <form>
+            <input id="myFilter" data-type="search" placeholder="Search for contacts" />
+        </form>
+
+        <ul data-role="listview" data-filter="true" data-input="#myFilter" data-inset="true" id="listofnames">
+            <li>
+                <a href="#">
+                    <table>
+                        <tr>
+                            <td> <img src="pp.jpg"> </td>
+                            <td> Mai Alaa </td>
+                            <td> <a href="tel:01228168606" data-role="button" data-icon="phone"></a> </td>
+                        </tr>
+                    </table>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <table>
+                        <tr>
+                            <td> <img src="pp.jpg"> </td>
+                            <td> Yasmin Ayman </td>
+                            <td> <a href="tel:01228168606" data-role="button" data-icon="phone"></a> </td>
+                        </tr>
+                    </table>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <table>
+                        <tr>
+                            <td> <img src="pp.jpg"> </td>
+                            <td> Rokaya Ismail </td>
+                            <td> <a href="tel:01228168606" data-role="button" data-icon="phone"></a> </td>
+                        </tr>
+                    </table>
+                </a>
+            </li>
+        </ul>
+
+        <footer data-role="footer">
+            <h2> Contact List </h2>
+        </footer>
+
+    </section>
+
+    <section data-role="page" id="newContact" data-add-back-btn="true">
+
+        <header data-role="header">
+            New Contact
+        </header>
+        <form>
+            <table>
+                <tr>
+                    <td><label>Name:</label></td>
+                    <td> <input type="text" name="name" id="name"> </td>
+
+                </tr>
+
+                <tr>
+                    <td> <label>Phone: </label> </td>
+                    <td> <input type="tel" name="phone" id="phone"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Email: </label>
+                    </td>
+                    <td> <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label>Gender:</label>
+                    </td>
+                    <td> <select id="genderSelect" data-role="flipswitch">
+                            <option value="male">male</option>
+                            <option value="female">Female</option>
+                        </select> </td>
+                </tr>
+
+                <tr>
+                    <td> <input type="button" value="Save" id="save" data-icon="star">
+                    </td>
+                    <td> <input type="reset" value="Cancle" data-icon="forbidden">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+        <footer data-role="footer">Contact List</footer>
+
+    </section>
+
+    <section data-role="page" id="user" data-add-back-btn="true"></section>
+
+    <section data-role="dialog" id="dialog"></section>
+</body>
+
+</html>
